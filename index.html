@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Gravitas+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Momo+Signature&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Playwrite+DE+SAS:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Stack+Sans+Text:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Amigo Yeshua</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="textHeader"><span>Clube</span> Amigo Yeshua</h1>
+        <p>Seja um Amigo da Yeshua, sustente a evangelização e os projetos <br>da comunidade. Sua contribuição
+            transforma vidas!</p>
+
+        <div class="botao">
+            <button class="btn" onclick="abrirModal()">>> Clique para doar <<</button>
+        </div>
+    </header>
+
+<!-- MODAL -->
+<div class="modal" id="modalDoacao">
+    <div class="modalConteudo">
+
+        <span class="fechar" onclick="fecharModal()">✖</span>
+
+        <h2 class="tituloModal">Faça sua doação</h2>
+
+        <form class="formDoacao">
+
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" required>
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000" required>
+
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" required>
+
+            <label>Valor da doação</label>
+            <div class="valores">
+                <button type="button" class="valor">R$ 30</button>
+                <button type="button" class="valor">R$ 50</button>
+                <button type="button" class="valor">R$ 100</button>
+                <button type="button" class="valor">R$ 300</button>
+            </div>
+
+            <button class="btnConcluir">Concluir doação <i class="bi bi-send-fill"></i></button>
+
+        </form>
+    </div>
+</div>
+
+<div class="modalAmigo" id="modalAmigo">
+    <div class="modalConteudo">
+        <span class="fechar" onclick="fecharModal()">✖</span>
+
+        <h2 class="tituloModal">Nível Amigo</h2>
+
+        <form class="formDoacao">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" required>
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000" required>
+
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" required>
+
+            <label>Valor da doação</label>
+            <div class="valores">
+                <button type="button" class="valor">R$ 30</button>
+            </div>
+
+            <button class="btnConcluir">Concluir doação <i class="bi bi-send-fill"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="modalAlianca" id="modalAlianca">
+    <div class="modalConteudo">
+        <span class="fechar" onclick="fecharModal()">✖</span>
+
+        <h2 class="tituloModal">Nível Aliança</h2>
+
+        <form class="formDoacao">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" required>
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000" required>
+
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" required>
+
+            <label>Valor da doação P/mês</label>
+            <div class="valores">
+                <button type="button" class="valor">R$ 50</button>
+            </div>
+
+            <button class="btnConcluir">Concluir doação <i class="bi bi-send-fill"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="modalFamilia" id="modalFamilia">
+    <div class="modalConteudo">
+        <span class="fechar" onclick="fecharModal()">✖</span>
+
+        <h2 class="tituloModal">Nível Família</h2>
+
+        <form class="formDoacao">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" required>
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000" required>
+
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" required>
+
+            <label>Valor da doação P/mês</label>
+            <div class="valores">
+                <button type="button" class="valor">R$ 100</button>
+            </div>
+
+            <button class="btnConcluir">Concluir doação <i class="bi bi-send-fill"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="modalEnviados" id="modalEnviados">
+    <div class="modalConteudo">
+        <span class="fechar" onclick="fecharModal()">✖</span>
+
+        <h2 class="tituloModal">Nível Enviados</h2>
+
+        <form class="formDoacao">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" required>
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000" required>
+
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" required>
+
+            <label>Valor da doação P/mês</label>
+            <div class="valores">
+                <button type="button" class="valor">R$ 300</button>
+            </div>
+
+            <button class="btnConcluir">Concluir doação <i class="bi bi-send-fill"></i></button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <h2 class="textMain">Se você é amigo de Jesus, também é amigo da Yeshua! <br>É esse Amigo fiel, Amado e Esposo que nos chama a, como Maria, gerar uma nova humanidade cheia do fogo de Pentecostes. <br>Vivemos essa missão guiados pelo Espírito Santo, com coragem, criatividade e um coração disponível para inovar e anunciar o amor de Deus em todos os lugares. Entre essas formas de viver a missão, estão também os nossos projetos sociais e missionários, que expressam o cuidado, a fé e o serviço que desejamos levar ao mundo.
+        </h2>
+
+    <h1 class="text">Como funciona?</h1>
+    <p class="pText">Em três passos simples, você faz parte da missão</p>
+
+    <section class="number">
+        <div class="box">
+            <h2 class="textBox">1</h2>
+            <p class="pBox">Escolha seu plano</p>
+        </div>
+        <div class="box">
+            <h2 class="textBox">2</h2>
+            <p class="pBox">Receba benefícios exclusivos</p>
+        </div>
+        <div class="box">
+            <h2 class="textBox">3</h2>
+            <p class="pBox">Faça parte da missão</p>
+        </div>
+    </section>
+
+    <h1 class="text2">Por que participar?</h1>
+    <section class="container">
+        <div class="area">
+            <i class="bi bi-heart"></i>
+            <h2 class="textArea">Evangelização</h2>
+            <p class="pArea">Sua contribuição leva a mensagem de Jesus a mais pessoas</p>
+        </div>
+        <div class="area">
+            <i class="bi bi-book"></i>
+            <h2 class="textArea">Conteúdos exclusivos</h2>
+            <p class="pArea">Receba espiritualidade contínua e formação especial</p>
+        </div>
+        <div class="area">
+            <i class="bi bi-people"></i>
+            <h2 class="textArea">Família na fé</h2>
+            <p class="pArea">Faça parte de uma comunidade que cresce no amor</p>
+        </div>
+        <div class="area">
+            <i class="bi bi-gift-fill"></i>
+            <h2 class="textArea">Retiros e missões</h2>
+            <p class="pArea">Ajude a manter projetos sociais e evangelização ativa</p>
+        </div>
+    </section>
+
+    <h1 class="text3">Escolha seu plano <i class="bi bi-arrow-down"></i></h1>
+    <p class="pText">Cada contribuição ajuda a levar a mensagem de Jesus a mais pessoas</p>
+    <section class="espaco">
+        <div class="space">
+            <i class="bi bi-leaf-fill" id="iconeFolha"></i>
+            <h3 class="textSpace">Amigo</h3>
+            <p class="pSpace">NÍVEL AMIGO</p>
+            <h1 class="textValor">R$ 30/mês</h1>
+            <p class="pAdd"><i class="bi bi-check2"></i>Bottom da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cartela de adesivos da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cupom permanente de 10% OFF na Yeshua Store</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Participação espiritual na missão (orações)</p>
+            <button class="btnNivel" id="btnAmigo">Nível Amigo <i class="bi bi-arrow-right"></i></button>
+        </div>
+
+        <div class="space">
+            <i class="bi bi-fire" id="iconeFogo"></i>
+            <h3 class="textSpace">Aliança</h3>
+            <p class="pSpace">NÍVEL ALIANÇA</p>
+            <h1 class="textValor">R$ 50/mês</h1>
+            <p class="pAdd"><i class="bi bi-check2"></i>Copo personalizado da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Bottom da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cartela de adesivos da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cupom permanente de 10% OFF na Yeshua Store</p>
+            <p class="pAdd"><i class="bi bi-check2"></i>Acesso a conteúdos exclusivos da comunidade</p>
+            <button class="btnNivel" id="btnAlianca">Nível Aliança <i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="space">
+            <i class="bi bi-stars" id="iconeEstrela"></i>
+            <h3 class="textSpace">Família</h3>
+            <p class="pSpace">NÍVEL FAMÍLIA</p>
+            <h1 class="textValor">R$ 100/mês</h1>
+            <p class="pAdd"><i class="bi bi-check2"></i>Bag personalizada da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Copo personalizado da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Bottom da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cartela de adesivos da Comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cupom permanente de 10% OFF na Yeshua Store</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Brinde especial da comunidade</p>
+            <button class="btnNivelfamilia" id="btnFamilia">Nível Família <i class="bi bi-arrow-right"></i></button>
+        </div>
+
+        <div class="space">
+            <i class="bi bi-box2-heart" id="iconeCoracao"></i>
+            <h3 class="textSpace">Enviados</h3>
+            <p class="pSpace">NÍVEL ENVIADOS</p>
+            <h1 class="textValor">R$ 300/mês</h1>
+            <p class="pAdd"><i class="bi bi-check2"></i>Kit completo do nível anterior</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Entrada livre nos eventos da comunidade</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Retiros e encontros inclusos</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Cupom permanente de 15% OFF na Yeshua Store</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Conteúdos exclusivos</p>
+            <p class="pAdd"> <i class="bi bi-check2"></i>Brinde especial da comunidade</p>
+            <button class="btnNivel" id="btnEnviados">Nível Enviados <i class="bi bi-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <footer class="yeshua-footer">
+        <div class="main-content">
+            <h2>🤍 Faça parte da missão da Yeshua!</h2>
+            <p>Sua contribuição transforma vidas. Torne-se <strong>um Amigo da Yeshua</strong> e ajude a levar a mensagem de Jesus a mais pessoas. 🙏🏾</p>
+            
+            <a href="#" class="btn-amigo">
+                💌 Torne-se um Amigo da Yeshua
+            </a>
+        </div>
+        
+        <div class="copyright">
+            © 2026 Comunidade Católica Yeshua. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
